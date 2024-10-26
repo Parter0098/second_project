@@ -228,7 +228,7 @@ div.container {
   // Circle design
   .circle-vases,
   .circle-mugs,
-  .circle-plates:hover{
+  .circle-plates:hover {
     box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
   }
   .circle-vases,
@@ -265,9 +265,13 @@ div.container {
     transition-timing-function: ease;
     text-decoration: none;
 
-    @media (max-width: 767px) {
-      width: 150px;
-      height: 150px;
+    @media (max-width: 1000px) {
+      width: 100px;
+      height: 100px;
+    }
+    @media (max-width: 1920px) {
+      width: 250px;
+      height: 250px;
     }
   }
 
@@ -294,7 +298,9 @@ div.container {
 
     p {
       color: $gray-color;
-      line-height: 1.6;
+      margin-top: 20px;
+      line-height: 24px;
+      text-align: left;
     }
   }
 }

@@ -234,12 +234,20 @@ div.container .circle-plates {
   transition-timing-function: ease;
   text-decoration: none;
 }
-@media (max-width: 767px) {
+@media (max-width: 1000px) {
   div.container .circle-vases,
   div.container .circle-mugs,
   div.container .circle-plates {
-    width: 150px;
-    height: 150px;
+    width: 100px;
+    height: 100px;
+  }
+}
+@media (max-width: 1920px) {
+  div.container .circle-vases,
+  div.container .circle-mugs,
+  div.container .circle-plates {
+    width: 250px;
+    height: 250px;
   }
 }
 div.container .circle-vases {
@@ -258,7 +266,9 @@ div.container .col-md-6 h4 {
 }
 div.container .col-md-6 p {
   color: #777;
-  line-height: 1.6;
+  margin-top: 20px;
+  line-height: 24px;
+  text-align: left;
 }
 
 /*# sourceMappingURL=output.css.map */
