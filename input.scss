@@ -51,16 +51,16 @@ nav.navbar {
       text-align: center;
     }
     > .salam-1 {
-      width: 100%;
+      width: 50%;
       position: absolute;
       left: 50%;
       display: flex;
-      justify-content: flex-end;
+      justify-content: flex-start;
       align-items: center;
       flex-wrap: wrap;
       > .navbar-nav {
         margin-right: 30px;
-        width: inherit;
+        width: 40%;
         div:hover {
           opacity: 1;
         }
@@ -164,15 +164,16 @@ nav.navbar {
 
   .hero-image {
     width: 70%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: relative;
-    left: 50px;
-    top: -50px;
+    position: absolute;
+    right: 10px;
+    top: 100px;
 
     img {
-      width: 100%;
+      width: 90%;
       height: auto;
       object-fit: contain;
     }
@@ -302,5 +303,51 @@ div.container {
       line-height: 24px;
       text-align: left;
     }
+  }
+}
+div.container-fluid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  // min-height: 100vh; // پر کردن کل صفحه
+
+  .card {
+    border: none;
+    width: 100%;
+    max-width: 1060px;
+    margin: 0 auto;
+
+    img {
+      width: 500px;
+      height: 700px; // ارتفاع تصویر برای هر اندازه‌ی صفحه
+      object-fit: cover;
+      background-color: #f8f9fa;
+    }
+
+    .card-body {
+      padding-top: 20px;
+    }
+
+    .card-title {
+      font-size: 1.1rem;
+      font-weight: bold;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      color: #6c757d;
+    }
+  }
+} 
+
+@media (max-width: 768px) {
+  .card img {
+    height: 250px; // اندازه کوچک‌تر تصویر برای صفحه‌های کوچکتر
+  }
+}
+
+@media (max-width: 576px) {
+  .card img {
+    height: 200px; // اندازه کوچک‌تر تصویر برای موبایل
   }
 }
