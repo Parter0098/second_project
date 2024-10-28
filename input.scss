@@ -10,6 +10,9 @@ $main-heading-color: #000;
 $description-color: #6c757d;
 $button-bg-color: #a50000;
 $button-text-color: #fff;
+$secondary-color-2: #6c757d;
+$highlight-color: #333;
+$icon-size: 50px;
 
 @font-face {
   font-family: playfairDisplay;
@@ -465,7 +468,10 @@ div.kala {
 }
 
 .pottery-hero {
-  min-height: 100vh;
+  margin-top: 300px;
+  min-height: 20vh;
+  position: relative;
+  background-image: url("img/backplates.jpg");
 
   .text-section {
     padding: 2rem;
@@ -512,10 +518,177 @@ div.kala {
   }
 
   .image-section {
-    background-image: url('img/671a1fca38ae284ac1ae82bc_raul-cacho-oses-779595-unsplash-p-3200-p-130x130q80.jpeg'); // Replace with your image URL
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-image: url("img/plates.jpg");
     background-size: cover;
     background-position: center;
-    min-height: 10vh;
+    min-height: 100%;
     min-width: 10vh;
+  }
+}
+
+.newsletter-section {
+  margin-top: 100px;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+  .newsletter-card {
+    padding: 2rem;
+    border-radius: 0.5rem;
+    max-width: 1000px;
+    width: 100%;
+
+    .icon {
+      img {
+        padding: 15px;
+        background-color: #ebb96a;
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+      }
+    }
+
+    h6 {
+      font-size: 18px;
+      letter-spacing: 5px;
+      color: #d03c3c;
+    }
+
+    h2 {
+      font-weight: 1000;
+      font-size: 1.75rem;
+    }
+
+    .subscription-form {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-top: 1rem;
+
+      @media (max-width: 576px) {
+        flex-direction: column;
+      }
+
+      .form-control {
+        border-radius: 0.25rem 0 0 0.25rem;
+
+        flex: 1;
+        @media (max-width: 576px) {
+          border-radius: 0.25rem;
+          margin-bottom: 0.5rem;
+          width: 100%;
+        }
+      }
+
+      .btn {
+        border-radius: 0 0.25rem 0.25rem 0;
+
+        color: #fff;
+        @media (max-width: 576px) {
+          border-radius: 0.25rem;
+          width: 100%;
+        }
+        &:hover {
+          background-color: darken(#000, 10%);
+        }
+      }
+    }
+
+    .form-check {
+      .form-check-input {
+        accent-color: #000;
+      }
+
+      .form-check-label {
+        font-size: 18px;
+        float: left;
+      }
+    }
+  }
+}
+.contact-section {
+  margin-top: 100px;
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+
+  .brand-name {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: #000;
+    margin-bottom: 1rem;
+  }
+
+  .brand-description {
+    color: $secondary-color-2;
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+
+  .contact-info {
+    .icon {
+      img {
+        width: $icon-size;
+        height: $icon-size;
+        object-fit: cover;
+      }
+    }
+
+    h6 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: #000;
+      margin-top: 1rem;
+      letter-spacing: 0.05rem;
+    }
+
+    p {
+      color: $highlight-color;
+      font-size: 1rem;
+    }
+  }
+
+  @media (min-width: 1920px) {
+    .container {
+      max-width: 1440px;
+    }
+
+    .brand-name {
+      font-size: 2.5rem;
+    }
+
+    .brand-description {
+      font-size: 1.2rem;
+    }
+
+    .contact-info {
+      .icon img {
+        width: 60px;
+        height: 60px;
+      }
+
+      h6 {
+        font-size: 1.2rem;
+      }
+
+      p {
+        font-size: 1.1rem;
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .contact-info {
+      margin-top: 2rem;
+
+      .col-md-4 {
+        margin-bottom: 2rem;
+      }
+    }
   }
 }

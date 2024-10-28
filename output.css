@@ -413,7 +413,10 @@ div.kala .full-width-container .card .card-text {
   }
 }
 .pottery-hero {
-  min-height: 100vh;
+  margin-top: 300px;
+  min-height: 20vh;
+  position: relative;
+  background-image: url("img/backplates.jpg");
 }
 .pottery-hero .text-section {
   padding: 2rem;
@@ -454,11 +457,150 @@ div.kala .full-width-container .card .card-text {
   color: #fff;
 }
 .pottery-hero .image-section {
-  background-image: url("img/671a1fca38ae284ac1ae82bc_raul-cacho-oses-779595-unsplash-p-3200-p-130x130q80.jpeg");
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url("img/plates.jpg");
   background-size: cover;
   background-position: center;
-  min-height: 10vh;
+  min-height: 100%;
   min-width: 10vh;
+}
+
+.newsletter-section {
+  margin-top: 100px;
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+.newsletter-section .newsletter-card {
+  padding: 2rem;
+  border-radius: 0.5rem;
+  max-width: 1000px;
+  width: 100%;
+}
+.newsletter-section .newsletter-card .icon img {
+  padding: 15px;
+  background-color: #ebb96a;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+.newsletter-section .newsletter-card h6 {
+  font-size: 18px;
+  letter-spacing: 5px;
+  color: #d03c3c;
+}
+.newsletter-section .newsletter-card h2 {
+  font-weight: 1000;
+  font-size: 1.75rem;
+}
+.newsletter-section .newsletter-card .subscription-form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 1rem;
+}
+@media (max-width: 576px) {
+  .newsletter-section .newsletter-card .subscription-form {
+    flex-direction: column;
+  }
+}
+.newsletter-section .newsletter-card .subscription-form .form-control {
+  border-radius: 0.25rem 0 0 0.25rem;
+  flex: 1;
+}
+@media (max-width: 576px) {
+  .newsletter-section .newsletter-card .subscription-form .form-control {
+    border-radius: 0.25rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+  }
+}
+.newsletter-section .newsletter-card .subscription-form .btn {
+  border-radius: 0 0.25rem 0.25rem 0;
+  color: #fff;
+}
+@media (max-width: 576px) {
+  .newsletter-section .newsletter-card .subscription-form .btn {
+    border-radius: 0.25rem;
+    width: 100%;
+  }
+}
+.newsletter-section .newsletter-card .subscription-form .btn:hover {
+  background-color: black;
+}
+.newsletter-section .newsletter-card .form-check .form-check-input {
+  accent-color: #000;
+}
+.newsletter-section .newsletter-card .form-check .form-check-label {
+  font-size: 18px;
+  float: left;
+}
+
+.contact-section {
+  margin-top: 100px;
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+}
+.contact-section .brand-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+.contact-section .brand-description {
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.contact-section .contact-info .icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.contact-section .contact-info h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  margin-top: 1rem;
+  letter-spacing: 0.05rem;
+}
+.contact-section .contact-info p {
+  color: #333;
+  font-size: 1rem;
+}
+@media (min-width: 1920px) {
+  .contact-section .container {
+    max-width: 1440px;
+  }
+  .contact-section .brand-name {
+    font-size: 2.5rem;
+  }
+  .contact-section .brand-description {
+    font-size: 1.2rem;
+  }
+  .contact-section .contact-info .icon img {
+    width: 60px;
+    height: 60px;
+  }
+  .contact-section .contact-info h6 {
+    font-size: 1.2rem;
+  }
+  .contact-section .contact-info p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact-section .contact-info {
+    margin-top: 2rem;
+  }
+  .contact-section .contact-info .col-md-4 {
+    margin-bottom: 2rem;
+  }
 }
 
 /*# sourceMappingURL=output.css.map */
