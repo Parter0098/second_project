@@ -275,6 +275,93 @@ div.container .col-md-6 p {
 div.kala {
   display: block;
 }
+div.kala .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+div.kala .container .text-center .subheading {
+  color: #c77c78;
+  letter-spacing: 2px;
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+div.kala .container .text-center .heading {
+  font-size: 2rem;
+  font-weight: bold;
+  font-size: 50px;
+}
+div.kala .end {
+  text-align: center;
+  width: 100%;
+  position: absolute;
+  margin-top: 60px;
+}
+div.kala .end > .button:hover {
+  border-top-style: none;
+  border-top-width: 0px;
+  border-top-color: transparent;
+  border-right-style: none;
+  border-right-width: 0px;
+  border-right-color: transparent;
+  border-bottom-style: none;
+  border-bottom-width: 0px;
+  border-bottom-color: transparent;
+  border-left-style: none;
+  border-left-width: 0px;
+  border-left-color: transparent;
+  background-color: black;
+  opacity: 1;
+  transform: translate(0px, -1px);
+  color: white;
+  font-weight: 400;
+}
+div.kala .end > .button {
+  display: inline-block;
+  width: fit-content;
+  height: auto;
+  margin-right: 12px;
+  padding-right: 24px;
+  padding-left: 24px;
+  border-top-style: none;
+  border-top-width: 1px;
+  border-top-color: white;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: white;
+  border-bottom-style: none;
+  border-bottom-width: 1px;
+  border-bottom-color: white;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: white;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+  background-color: white;
+  transition-property: all;
+  transition-duration: 400ms;
+  transition-timing-function: ease;
+  color: black;
+  font-size: 12px;
+  line-height: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  background-color: #b52d2d;
+}
+div.kala .end > .button > .button-1 {
+  display: block;
+  height: auto;
+  width: 400px;
+  text-align: center;
+  text-decoration: none;
+  padding: 40px 90px;
+  margin: 0 auto;
+  font-family: Poppins;
+}
 div.kala .full-width-container {
   display: flex;
   align-items: center;
@@ -284,7 +371,7 @@ div.kala .full-width-container {
 div.kala .full-width-container .card {
   border: none;
   width: 100%;
-  max-width: 350px;
+  max-width: 550px;
   margin: 0 auto;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -324,6 +411,54 @@ div.kala .full-width-container .card .card-text {
   .card {
     max-width: 100%;
   }
+}
+.pottery-hero {
+  min-height: 100vh;
+}
+.pottery-hero .text-section {
+  padding: 2rem;
+}
+.pottery-hero .text-section .subheading {
+  color: #c77c78;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+.pottery-hero .text-section .main-heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #000;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.pottery-hero .text-section .description {
+  color: #6c757d;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+.pottery-hero .text-section .description a {
+  color: #c77c78;
+  text-decoration: underline;
+}
+.pottery-hero .text-section .btn-collection {
+  background-color: #a50000;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  border: none;
+}
+.pottery-hero .text-section .btn-collection:hover {
+  background-color: #720000;
+  color: #fff;
+}
+.pottery-hero .image-section {
+  background-image: url("img/671a1fca38ae284ac1ae82bc_raul-cacho-oses-779595-unsplash-p-3200-p-130x130q80.jpeg");
+  background-size: cover;
+  background-position: center;
+  min-height: 10vh;
+  min-width: 10vh;
 }
 
 /*# sourceMappingURL=output.css.map */
