@@ -305,49 +305,65 @@ div.container {
     }
   }
 }
-div.container-fluid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  // min-height: 100vh; // پر کردن کل صفحه
+div.kala {
+  display: block;
 
-  .card {
-    border: none;
-    width: 100%;
-    max-width: 1060px;
-    margin: 0 auto;
+  .full-width-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
 
-    img {
-      width: 500px;
-      height: 700px; // ارتفاع تصویر برای هر اندازه‌ی صفحه
-      object-fit: cover;
-      background-color: #f8f9fa;
-    }
+    .card {
+      border: none;
+      width: 100%;
+      max-width: 350px; // تنظیم حداکثر عرض کارت
+      margin: 0 auto;
+      border: 1px solid #ddd; // حاشیه‌ی خاکستری کمرنگ
+      border-radius: 8px; // گوشه‌های گرد
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // سایه برای ایجاد عمق
 
-    .card-body {
-      padding-top: 20px;
-    }
+      img {
+        width: 100%; // تصاویری با عرض 100% برای ریسپانسیو
+        height: auto; // حفظ نسبت ابعاد
+        object-fit: cover;
+        background-color: #f8f9fa;
+      }
 
-    .card-title {
-      font-size: 1.1rem;
-      font-weight: bold;
-    }
+      .card-body {
+        padding-top: 20px;
+      }
 
-    .card-text {
-      font-size: 1rem;
-      color: #6c757d;
+      .card-title {
+        font-size: 1.1rem;
+        font-weight: bold;
+      }
+
+      .card-text {
+        font-size: 1rem;
+        color: #6c757d;
+      }
     }
   }
-} 
+}
 
-@media (max-width: 768px) {
-  .card img {
-    height: 250px; // اندازه کوچک‌تر تصویر برای صفحه‌های کوچکتر
+@media (max-width: 1000px) {
+  .full-width-container {
+    align-items: flex-start;
+    justify-content: start;
+  }
+
+  .card {
+    max-width: 300px; // کاهش حداکثر عرض کارت در تبلت‌ها
+  }
+
+  .card-body {
+    padding: 0;
   }
 }
 
 @media (max-width: 576px) {
-  .card img {
-    height: 200px; // اندازه کوچک‌تر تصویر برای موبایل
+  .card {
+    max-width: 100%; // کارت‌ها در موبایل 100% عرض بگیرند
   }
 }
