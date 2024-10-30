@@ -1,3 +1,4 @@
+@import "https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/scss/bootstrap";
 * {
   margin: 0;
   padding: 0;
@@ -195,6 +196,207 @@ div.container .col-md-6 p {
   margin-top: 20px;
   line-height: 24px;
   text-align: left;
+}
+
+.our-crew {
+  background-color: #f9f9f9;
+}
+.our-crew .text-danger {
+  color: #e74c3c;
+}
+.our-crew h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.team-member {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.team-member:hover {
+  transform: translateY(-5px);
+}
+.team-member img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+.team-member h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+.team-member p {
+  font-size: 0.9rem;
+  color: #777;
+}
+.team-member .social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+.team-member .social-icons a {
+  font-size: 1.2rem;
+  color: #333;
+  transition: color 0.3s ease;
+}
+.team-member .social-icons a:hover {
+  color: #e74c3c;
+}
+
+@media (max-width: 768px) {
+  .our-crew h2 {
+    font-size: 2rem;
+  }
+  .team-member p {
+    font-size: 0.85rem;
+  }
+}
+.vase-section {
+  padding: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120vh;
+}
+.vase-section .vase-images {
+  text-align: center;
+  position: relative;
+}
+.vase-section .vase-images .vase {
+  max-width: 50%;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+.vase-section .vase-images .vase.vase-left {
+  position: absolute;
+  left: 10%;
+  transform: scale(1);
+  z-index: 1;
+}
+.vase-section .vase-images .vase.vase-right {
+  position: absolute;
+  right: 10%;
+  transform: scale(1.2);
+}
+.vase-section .text-content {
+  padding: 2rem;
+}
+.vase-section .text-content h2 {
+  font-weight: bold;
+}
+.vase-section .text-content h2 .highlight {
+  color: #ff5a5a;
+  font-size: 1.5rem;
+}
+.vase-section .text-content p {
+  font-size: 1rem;
+  color: #666;
+}
+.vase-section .text-content .btn-link {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.vase-section .text-content .btn-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 1200px) {
+  .vase-section .vase-images .vase {
+    max-width: 40%;
+  }
+}
+@media (max-width: 992px) {
+  .vase-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .vase-section .vase-images {
+    margin-bottom: 2rem;
+  }
+  .vase-section .vase-images .vase {
+    position: static;
+    max-width: 70%;
+  }
+  .vase-section .text-content {
+    padding: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .vase-section {
+    padding: 1.5rem;
+  }
+  .vase-section .text-content h2 {
+    font-size: 1.5rem;
+  }
+  .vase-section .text-content p {
+    font-size: 0.9rem;
+  }
+}
+.contact-section {
+  margin-top: 100px;
+  background-color: #f8f9fa;
+  padding: 3rem 0;
+}
+.contact-section .brand-name {
+  font-family: "Poppins", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #000;
+  margin-bottom: 1rem;
+}
+.contact-section .brand-description {
+  color: #6c757d;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+.contact-section .contact-info .icon img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+}
+.contact-section .contact-info h6 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #000;
+  margin-top: 1rem;
+  letter-spacing: 0.05rem;
+}
+.contact-section .contact-info p {
+  color: #333;
+  font-size: 1rem;
+}
+@media (min-width: 1920px) {
+  .contact-section .container {
+    max-width: 1440px;
+  }
+  .contact-section .brand-name {
+    font-size: 2.5rem;
+  }
+  .contact-section .brand-description {
+    font-size: 1.2rem;
+  }
+  .contact-section .contact-info .icon img {
+    width: 60px;
+    height: 60px;
+  }
+  .contact-section .contact-info h6 {
+    font-size: 1.2rem;
+  }
+  .contact-section .contact-info p {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 768px) {
+  .contact-section .contact-info {
+    margin-top: 2rem;
+  }
+  .contact-section .contact-info .col-md-4 {
+    margin-bottom: 2rem;
+  }
 }
 
 /*# sourceMappingURL=output_About.css.map */
