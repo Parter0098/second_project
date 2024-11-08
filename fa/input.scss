@@ -1,0 +1,419 @@
+$bg-color: #f3efef;
+$primary-color-2: #d03c3c;
+$secondary-color: #ebb96a;
+$tertiary-color: #eb6841;
+$gray-color: #777;
+$circle-size: 200px;
+$primary-color: #dc3545;
+$subheading-color: #c77c78;
+$main-heading-color: #000;
+$description-color: #6c757d;
+$button-bg-color: #a50000;
+$button-text-color: #fff;
+$secondary-color-2: #6c757d;
+$highlight-color: #333;
+$icon-size: 50px;
+
+@font-face {
+  font-family: playfairDisplay;
+  src: url(font/PlayfairDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Vazir, sans-serif;
+  src: url("https://cdn.fontcdn.ir/font/vazir/vazir.css");
+}
+@font-face {
+  font-family: pacifico;
+  src: url(font/Pacifico-Regular.ttf);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: Vazir, sans-serif; /* تغییر به فونت فارسی */
+}
+
+html {
+  direction: rtl; /* تنظیم متن به راست */
+}
+
+nav.navbar {
+  position: sticky;
+  display: block;
+  width: 100%;
+  background-color: white;
+
+  > .wrap {
+    width: 100%;
+    height: 80px;
+    position: relative;
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+
+    > .navbar-brand {
+      position: absolute;
+      right: 10%;
+      color: #1d1f2e;
+      font-family: pacifico;
+      font-size: 34px;
+      line-height: 40px;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    > .navbar-nav {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      flex-wrap: wrap;
+      width: auto;
+      margin-right: 30px;
+
+      div {
+        border-right: 1px solid #747373;
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+          background-color: #f1f1f1;
+        }
+
+        a {
+          font-family: Vazir, sans-serif;
+          font-size: 14px;
+          line-height: 18px;
+          font-weight: 400;
+          color: #1d1f2e;
+          text-decoration: none;
+          text-transform: uppercase;
+        }
+      }
+
+      > a {
+        padding: 20px 15px;
+        font-family: Vazir, sans-serif;
+        font-size: 12px;
+        line-height: 18px;
+        font-weight: 400;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #1d1f2e;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.hero-section {
+  padding-right: 50px;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $bg-color;
+
+  .hero-content {
+    max-width: 50%;
+    text-align: right;
+
+    h2 {
+      margin-bottom: 30px;
+      font-family: Vazir, sans-serif;
+      color: lightcoral;
+      font-size: 14px;
+      line-height: 24px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: 48px;
+      font-weight: 400;
+      width: 500px;
+
+      span {
+        color: $primary-color;
+      }
+    }
+
+    p {
+      font-size: 16px;
+      color: #6c757d;
+      margin-top: 20px;
+      text-align: right;
+    }
+
+    .shop-btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: $primary-color;
+      color: #fff;
+      font-size: 1.25rem;
+      border: none;
+      border-radius: 0.25rem;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+    }
+  }
+
+  .hero-image {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 10px;
+    top: 100px;
+
+    img {
+      width: 90%;
+      height: auto;
+      object-fit: contain;
+    }
+  }
+}
+
+div.container {
+  padding: 60px 15px;
+
+  h6 {
+    letter-spacing: 2px;
+    color: $gray-color;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    span {
+      color: $primary-color-2;
+    }
+  }
+
+  .row {
+    justify-content: center;
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+  }
+
+  a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: transform 0.5s ease;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .circle-vases,
+  .circle-mugs,
+  .circle-plates:hover {
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .circle-vases,
+  .circle-mugs,
+  .circle-plates {
+    display: flex;
+    width: 240px;
+    height: 240px;
+    margin-right: 40px;
+    margin-left: 40px;
+    padding-top: 30px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top-style: solid;
+    border-top-width: 30px;
+    border-top-color: rgba(0, 0, 0, 0.05);
+    border-right-style: solid;
+    border-right-width: 30px;
+    border-right-color: rgba(0, 0, 0, 0.05);
+    border-bottom-style: solid;
+    border-bottom-width: 30px;
+    border-bottom-color: rgba(0, 0, 0, 0.05);
+    border-left-style: solid;
+    border-left-width: 30px;
+    border-left-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+    background-color: #ebb96a;
+    transition-property: box-shadow;
+    transition-duration: 500ms;
+    transition-timing-function: ease;
+    text-decoration: none;
+
+    @media (max-width: 1000px) {
+      width: 100px;
+      height: 100px;
+    }
+
+    @media (max-width: 1920px) {
+      width: 250px;
+      height: 250px;
+    }
+  }
+
+  .circle-vases {
+    background: linear-gradient(135deg, #e6c56d, #ebb96a);
+  }
+
+  .circle-mugs {
+    background: linear-gradient(135deg, #eb6841, #d6542b);
+  }
+
+  .circle-plates {
+    background: linear-gradient(135deg, #d03c3c, #b52d2d);
+  }
+
+  .col-md-6 {
+    h4 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      width: 250px;
+    }
+
+    p {
+      color: $gray-color;
+      margin-top: 20px;
+      line-height: 24px;
+      text-align: left;
+    }
+  }
+}
+
+div.kala {
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+
+    .text-center {
+      .subheading {
+        color: $subheading-color;
+        letter-spacing: 2px;
+        font-size: 12px;
+        font-weight: bold;
+      }
+
+      .main-heading {
+        color: $main-heading-color;
+        font-size: 3.2rem;
+        font-weight: 600;
+        margin-top: 30px;
+      }
+    }
+  }
+}
+.pottery-hero {
+  margin-top: 300px;
+  min-height: 20vh;
+  position: relative;
+  background-image: url("img/backplates.jpg");
+
+  .text-section {
+    padding: 2rem;
+
+    .subheading {
+      color: $subheading-color;
+      font-size: 0.875rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    .main-heading {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: $main-heading-color;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .description {
+      color: $description-color;
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+
+      a {
+        color: $subheading-color;
+        text-decoration: underline;
+      }
+    }
+
+    .btn-collection {
+      background-color: $button-bg-color;
+      color: $button-text-color;
+      padding: 0.75rem 1.5rem;
+      font-weight: 500;
+      text-transform: uppercase;
+      border: none;
+      &:hover {
+        background-color: darken($button-bg-color, 10%);
+        color: $button-text-color;
+      }
+    }
+  }
+
+  .image-section {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: url("img/plates.jpg");
+    background-size: cover;
+    background-position: center;
+    min-height: 100%;
+    min-width: 10vh;
+  }
+}
+
+footer {
+  background-color: #1d1f2e;
+  padding: 40px 0;
+  color: #fff;
+  text-align: center;
+  font-size: 14px;
+
+  p {
+    margin: 0;
+    font-weight: 300;
+  }
+
+  .social-icons {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    a {
+      margin: 0 10px;
+      color: #fff;
+      font-size: 18px;
+      transition: all 0.3s ease;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+  }
+}
