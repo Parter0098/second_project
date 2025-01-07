@@ -24,48 +24,56 @@ html {
 
 nav.navbar {
   position: sticky;
-  display: block;
+  top: 0;
   width: 100%;
   background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 nav.navbar > .wrap {
   width: 100%;
   height: 80px;
-  position: relative;
   display: flex;
+  align-items: center;
   margin-right: auto;
   margin-left: auto;
 }
 nav.navbar > .wrap > .navbar-brand {
-  position: absolute;
-  right: 10%;
   color: #1d1f2e;
-  font-family: pacifico;
+  font-family: pacifico, cursive;
   font-size: 34px;
   line-height: 40px;
   font-weight: 700;
   text-align: center;
+  margin-right: 10%;
 }
-nav.navbar > .wrap > .navbar-nav {
+nav.navbar > .wrap > .navbar-collapse {
+  flex-grow: 1;
+}
+nav.navbar > .wrap .navbar-nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
-  width: auto;
-  margin-right: 30px;
+  width: 100%;
+  margin-left: 30px;
 }
-nav.navbar > .wrap > .navbar-nav div {
-  border-right: 1px solid #747373;
+nav.navbar > .wrap .navbar-nav .cart-wrapper {
+  display: flex;
+  align-items: center;
   padding: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  border-right: 1px solid #e0e0e0;
+  position: relative;
   transition: background-color 0.3s ease;
 }
-nav.navbar > .wrap > .navbar-nav div:hover {
-  background-color: #f1f1f1;
+nav.navbar > .wrap .navbar-nav .cart-wrapper:hover {
+  background-color: #f8f9fa;
 }
-nav.navbar > .wrap > .navbar-nav div a {
+nav.navbar > .wrap .navbar-nav .cart-wrapper .cart-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+nav.navbar > .wrap .navbar-nav .cart-wrapper .cart-link {
   font-family: Vazir, sans-serif;
   font-size: 14px;
   line-height: 18px;
@@ -74,7 +82,27 @@ nav.navbar > .wrap > .navbar-nav div a {
   text-decoration: none;
   text-transform: uppercase;
 }
-nav.navbar > .wrap > .navbar-nav > a {
+nav.navbar > .wrap .navbar-nav .cart-wrapper .cart-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #dc3545;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+nav.navbar > .wrap .navbar-nav .cart-wrapper a {
+  font-family: Vazir, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #1d1f2e;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav.navbar > .wrap .navbar-nav > a {
   padding: 20px 15px;
   font-family: Vazir, sans-serif;
   font-size: 12px;
@@ -86,10 +114,28 @@ nav.navbar > .wrap > .navbar-nav > a {
   text-decoration: none;
   transition: color 0.3s ease;
 }
-nav.navbar > .wrap > .navbar-nav > a:hover {
-  color: #dc3545;
+nav.navbar > .wrap .navbar-nav > a:hover {
+  color: #ff6b6b;
 }
 
+@media (max-width: 992px) {
+  nav.navbar > .wrap > .navbar-brand {
+    position: static;
+    margin-right: auto;
+  }
+  nav.navbar > .wrap .navbar-nav {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav.navbar > .wrap .navbar-nav .cart-wrapper {
+    border-right: none;
+    padding: 10px 0;
+  }
+  nav.navbar > .wrap .navbar-nav > a {
+    padding: 10px 15px;
+  }
+}
 .hero-section {
   padding-right: 50px;
   min-height: 100vh;
@@ -136,7 +182,7 @@ nav.navbar > .wrap > .navbar-nav > a:hover {
   border-radius: 0.25rem;
 }
 .hero-section .hero-content .shop-btn:hover {
-  background-color: rgb(189.2151898734, 32.7848101266, 47.7721518987);
+  background-color: #dc3545;
 }
 .hero-section .hero-image {
   width: 70%;
@@ -321,7 +367,7 @@ div.kala .container .text-center .main-heading {
   border: none;
 }
 .pottery-hero .text-section .btn-collection:hover {
-  background-color: #720000;
+  background-color: #a50000;
   color: #fff;
 }
 .pottery-hero .image-section {

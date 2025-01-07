@@ -1,98 +1,213 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: Vazir, sans-serif;
 }
 
-body {
-  background-color: #f8f9fa;
+html {
+  direction: rtl;
 }
 
 nav.navbar {
   position: sticky;
-  display: block;
+  top: 0;
   width: 100%;
-  height: auto;
-  height: auto;
   background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 nav.navbar > .wrap {
   width: 100%;
   height: 80px;
-  position: relative;
   display: flex;
+  align-items: center;
   margin-right: auto;
   margin-left: auto;
 }
 nav.navbar > .wrap > .navbar-brand {
-  position: absolute;
   color: #1d1f2e;
-  left: 10%;
-  font-family: pacifico;
+  font-family: pacifico, cursive;
   font-size: 34px;
   line-height: 40px;
   font-weight: 700;
   text-align: center;
+  margin-right: 10%;
 }
-nav.navbar > .wrap > .salam-1 {
-  width: 50%;
-  position: absolute;
-  left: 50%;
+nav.navbar > .wrap > .navbar-collapse {
+  flex-grow: 1;
+}
+nav.navbar > .wrap .navbar-nav {
   display: flex;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 30px;
 }
-nav.navbar > .wrap > .salam-1 > .navbar-nav {
-  margin-right: 30px;
-  width: 40%;
-}
-nav.navbar > .wrap > .salam-1 > .navbar-nav div:hover {
-  opacity: 1;
-}
-nav.navbar > .wrap > .salam-1 > .navbar-nav div {
-  border-left-style: solid;
-  border-left-width: 1px;
-  border-left-color: #747373;
-  width: 12%;
-  height: auto;
-  position: relative;
+nav.navbar > .wrap .navbar-nav .cart-wrapper {
   display: flex;
-  padding: 9px 15px;
-  margin-top: 10px;
-  background-color: transparent;
-  opacity: 0.7;
+  align-items: center;
+  padding: 10px;
+  border-right: 1px solid #e0e0e0;
+  position: relative;
+  transition: background-color 0.3s ease;
 }
-nav.navbar > .wrap > .salam-1 > .navbar-nav div > img {
-  display: inline-block;
-  margin-right: 5px;
-  width: 20px;
-  height: 20px;
+nav.navbar > .wrap .navbar-nav .cart-wrapper:hover {
+  background-color: #f8f9fa;
 }
-nav.navbar > .wrap > .salam-1 > .navbar-nav div > a {
-  padding: 5px;
-  display: inline-block;
-  font-family: Poppins;
+nav.navbar > .wrap .navbar-nav .cart-wrapper .cart-icon {
+  width: 24px;
+  height: 24px;
+  margin-left: 8px;
+}
+nav.navbar > .wrap .navbar-nav .cart-wrapper .cart-link {
+  font-family: Vazir, sans-serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
-  letter-spacing: 2px;
-  text-transform: uppercase;
   color: #1d1f2e;
+  text-decoration: none;
+  text-transform: uppercase;
 }
-nav.navbar > .wrap > .salam-1 > .navbar-nav > a {
-  padding: 21px 20px;
-  font-family: Poppins;
+nav.navbar > .wrap .navbar-nav .cart-wrapper .cart-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background-color: #333;
+  color: white;
+  font-size: 12px;
+  padding: 2px 6px;
+  border-radius: 50%;
+  font-weight: bold;
+}
+nav.navbar > .wrap .navbar-nav .cart-wrapper a {
+  font-family: Vazir, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: 400;
+  color: #1d1f2e;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+nav.navbar > .wrap .navbar-nav > a {
+  padding: 20px 15px;
+  font-family: Vazir, sans-serif;
   font-size: 12px;
   line-height: 18px;
   font-weight: 400;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #1d1f2e;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+nav.navbar > .wrap .navbar-nav > a:hover {
+  color: #ff6b6b;
+}
+
+@media (max-width: 992px) {
+  nav.navbar > .wrap > .navbar-brand {
+    position: static;
+    margin-right: auto;
+  }
+  nav.navbar > .wrap .navbar-nav {
+    margin-left: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  nav.navbar > .wrap .navbar-nav .cart-wrapper {
+    border-right: none;
+    padding: 10px 0;
+  }
+  nav.navbar > .wrap .navbar-nav > a {
+    padding: 10px 15px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1920px) {
+  nav.navbar > .wrap > .navbar-brand {
+    font-size: 36px;
+  }
+  nav.navbar > .wrap .navbar-nav > a {
+    font-size: 14px;
+    padding: 15px 20px;
+  }
+}
+.bsb-hero-1 {
+  margin-top: 80px;
+  direction: rtl;
+  text-align: right;
+}
+.bsb-hero-1 .container {
+  margin-top: 80px;
+  direction: rtl;
+  text-align: right;
+}
+.bsb-hero-1 .row {
+  margin-top: 80px;
+  direction: rtl;
+  text-align: right;
+}
+.bsb-hero-1 .col-12 {
+  margin-top: 80px;
+  direction: rtl;
+  text-align: right;
+}
+@media (max-width: 768px) {
+  .bsb-hero-1 .col-12 .bsb-hero-1 {
+    margin-top: 60px;
+  }
+}
+.bsb-hero-1 .col-12 h2 {
+  font-size: 2.5rem;
+}
+@media (max-width: 768px) {
+  .bsb-hero-1 .col-12 h2 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 576px) {
+  .bsb-hero-1 .col-12 h2 {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .bsb-hero-1 .col-12 h2 {
+    font-size: 3rem;
+  }
+}
+@media (min-width: 1920px) {
+  .bsb-hero-1 .col-12 h2 {
+    font-size: 3.5rem;
+  }
+}
+.bsb-hero-1 .col-12 p {
+  font-size: 1.25rem;
+}
+@media (max-width: 768px) {
+  .bsb-hero-1 .col-12 p {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 576px) {
+  .bsb-hero-1 .col-12 p {
+    font-size: 0.875rem;
+  }
+}
+@media (min-width: 1200px) {
+  .bsb-hero-1 .col-12 p {
+    font-size: 1.5rem;
+  }
+}
+@media (min-width: 1920px) {
+  .bsb-hero-1 .col-12 p {
+    font-size: 1.75rem;
+  }
 }
 
 .contact-section {
   margin-top: 100px;
+  direction: rtl;
+  text-align: right;
 }
 .contact-section .contact-title {
   margin-bottom: 50px;
@@ -115,6 +230,14 @@ nav.navbar > .wrap > .salam-1 > .navbar-nav > a {
   font-weight: 500;
   color: #e74c3c;
 }
+@media (min-width: 768px) {
+  .contact-section .contact-title {
+    font-size: 2.2rem;
+  }
+  .contact-section .contact-info {
+    font-size: 1.05rem;
+  }
+}
 @media (min-width: 1200px) {
   .contact-section .contact-title {
     font-size: 2.5rem;
@@ -128,6 +251,12 @@ nav.navbar > .wrap > .salam-1 > .navbar-nav > a {
     padding-top: 4rem;
     padding-bottom: 4rem;
   }
+  .contact-section .contact-title {
+    font-size: 3rem;
+  }
+  .contact-section .contact-info {
+    font-size: 1.25rem;
+  }
 }
 
 .header-image img {
@@ -138,8 +267,9 @@ nav.navbar > .wrap > .salam-1 > .navbar-nav > a {
 }
 
 .contact-form-section {
-  background-color: #f8f9fa;
-  padding: 3rem 1rem;
+  margin-top: 100px;
+  direction: rtl;
+  text-align: right;
 }
 .contact-form-section .form-title {
   font-size: 1.75rem;
@@ -169,7 +299,7 @@ nav.navbar > .wrap > .salam-1 > .navbar-nav > a {
   border: none;
 }
 .contact-form-section .send-button:hover {
-  background-color: rgb(213.698630137, 43.8356164384, 26.301369863);
+  background-color: #e74c3c;
 }
 .contact-form-section .map-placeholder {
   background-color: #ddd;
@@ -183,20 +313,22 @@ nav.navbar > .wrap > .salam-1 > .navbar-nav > a {
   justify-content: center;
   align-items: center;
 }
+@media (min-width: 768px) {
+  .contact-form-section .form-title {
+    font-size: 2rem;
+  }
+}
 @media (min-width: 1200px) {
   .contact-form-section {
     padding: 4rem 2rem;
   }
   .contact-form-section .form-title {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 }
 @media (min-width: 1920px) {
   .contact-form-section {
     padding: 5rem 3rem;
-  }
-  .contact-form-section .form-title {
-    font-size: 2.25rem;
   }
   .contact-form-section .send-button {
     padding: 1rem 2.5rem;
@@ -205,8 +337,9 @@ nav.navbar > .wrap > .salam-1 > .navbar-nav > a {
 
 .contact-section {
   margin-top: 100px;
+  direction: rtl;
+  text-align: right;
   background-color: #f8f9fa;
-  padding: 3rem 0;
 }
 .contact-section .brand-name {
   font-family: "Poppins", sans-serif;
@@ -236,15 +369,23 @@ nav.navbar > .wrap > .salam-1 > .navbar-nav > a {
   color: #333;
   font-size: 1rem;
 }
-@media (min-width: 1920px) {
-  .contact-section .container {
-    max-width: 1440px;
+@media (min-width: 768px) {
+  .contact-section .brand-name {
+    font-size: 2.2rem;
+  }
+  .contact-section .brand-description {
+    font-size: 1.2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .contact-section {
+    padding: 4rem 2rem;
   }
   .contact-section .brand-name {
     font-size: 2.5rem;
   }
   .contact-section .brand-description {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
   .contact-section .contact-info .icon img {
     width: 60px;
@@ -255,6 +396,27 @@ nav.navbar > .wrap > .salam-1 > .navbar-nav > a {
   }
   .contact-section .contact-info p {
     font-size: 1.1rem;
+  }
+}
+@media (min-width: 1920px) {
+  .contact-section {
+    padding: 5rem 3rem;
+  }
+  .contact-section .brand-name {
+    font-size: 3rem;
+  }
+  .contact-section .brand-description {
+    font-size: 1.4rem;
+  }
+  .contact-section .contact-info .icon img {
+    width: 70px;
+    height: 70px;
+  }
+  .contact-section .contact-info h6 {
+    font-size: 1.5rem;
+  }
+  .contact-section .contact-info p {
+    font-size: 1.2rem;
   }
 }
 @media (max-width: 768px) {

@@ -17,15 +17,16 @@
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="تنظیمات ناوبری">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="salam-1 collapse navbar-collapse" id="navbarNavAltMarkup">
-                <div class="navbar-nav">
-                    <a style="color: firebrick;" class="nav-link active" aria-current="صفحه اول" href="#">صفحه اصلی</a>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav ms-auto">
+                    <a style="color: firebrick;" class="nav-link active" aria-current="page" href="#">صفحه اصلی</a>
                     <a class="nav-link" href="./About.html">درباره ما</a>
                     <a class="nav-link" href="shop.html">فروشگاه</a>
                     <a class="nav-link" href="contact.html">تماس با ما</a>
-                    <div>
-                        <img src="./img/shop-icon.svg" alt="" />
-                        <a class="nav-link" href="#">سبد خرید</a>
+                    <div class="cart-wrapper">
+                        <img src="./img/shop-icon.svg" alt="سبد خرید" class="cart-icon" />
+                        <a class="nav-link cart-link" href="#">سبد خرید</a>
+                        <span class="cart-badge">3</span> <!-- اضافه کردن تعداد آیتم‌ها در سبد خرید -->
                     </div>
                 </div>
             </div>
