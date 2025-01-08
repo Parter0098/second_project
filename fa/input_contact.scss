@@ -13,6 +13,19 @@ $secondary-color-2: #6c757d;
 $highlight-color: #333;
 $icon-size: 50px;
 
+@font-face {
+  font-family: playfairDisplay;
+  src: url(font/PlayfairDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Vazir, sans-serif;
+  src: url("https://cdn.fontcdn.ir/font/vazir/vazir.css");
+}
+@font-face {
+  font-family: pacifico;
+  src: url(font/Pacifico-Regular.ttf);
+}
+
 * {
   box-sizing: border-box;
   padding: 0px;
@@ -174,18 +187,15 @@ nav.navbar {
 
 
 .bsb-hero-1 {
-  margin-top: 80px;
   direction: rtl;
   text-align: right;
 
   .container {
-    margin-top: 80px;
     direction: rtl;
     text-align: right;
   }
 
   .row {
-    margin-top: 80px;
     direction: rtl;
     text-align: right;
   }

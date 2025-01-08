@@ -1,14 +1,33 @@
+$primary-color: #333;
 $primary-color-3: #ff6b6b;
+$text-color: #1d1f2e;
+$font-family-farsi: Vazir, sans-serif;
+$font-family-brand: pacifico, cursive;
+$border-color: #e0e0e0;
 $text-color: #1d1f2e;
 $font-family-farsi: Vazir, sans-serif;
 $font-family-brand: pacifico, cursive;
 $border-color: #e0e0e0;
 $subheading-color: #c77c78;
 
+@font-face {
+  font-family: playfairDisplay;
+  src: url(font/PlayfairDisplay-VariableFont_wght.ttf);
+}
+@font-face {
+  font-family: Vazir, sans-serif;
+  src: url("https://cdn.fontcdn.ir/font/vazir/vazir.css");
+}
+@font-face {
+  font-family: pacifico;
+  src: url(font/Pacifico-Regular.ttf);
+}
+
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: Vazir, sans-serif;
 }
 
 nav.navbar {
@@ -16,7 +35,7 @@ nav.navbar {
   top: 0;
   width: 100%;
   background-color: white;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); // سایه برای زیبایی بیشتر
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1000;
 
   > .wrap {
@@ -34,10 +53,10 @@ nav.navbar {
       line-height: 40px;
       font-weight: 700;
       text-align: center;
-      margin-right: 10%; // تنظیم فاصله از سمت راست
+      margin-right: 10%;
     }
     > .navbar-collapse {
-      flex-grow: 1; // Allow navbar to take remaining space
+      flex-grow: 1;
     }
 
     .navbar-nav {
@@ -52,19 +71,19 @@ nav.navbar {
         align-items: center;
         padding: 10px;
         border-right: 1px solid $border-color;
-        position: relative; // برای قرار دادن badge
+        position: relative;
         transition: background-color 0.3s ease;
 
         &:hover {
-          background-color: #f8f9fa; // رنگ پس‌زمینه هنگام هاور
+          background-color: #f8f9fa;
         }
         .cart-icon {
           width: 24px;
           height: 24px;
-          margin-left: 8px; // فاصله بین آیکون و متن
+          margin-left: 8px;
         }
         .cart-link {
-          font-family: $font-family-farsi;
+          font-family: Vazir, sans-serif;
           font-size: 14px;
           line-height: 18px;
           font-weight: 400;
@@ -81,7 +100,7 @@ nav.navbar {
           color: white;
           font-size: 12px;
           padding: 2px 6px;
-          border-radius: 50%; // گرد کردن لبه‌ها
+          border-radius: 50%;
           font-weight: bold;
         }
 
@@ -98,7 +117,7 @@ nav.navbar {
 
       > a {
         padding: 20px 15px;
-        font-family: $font-family-farsi;
+        font-family: Vazir, sans-serif;
         font-size: 12px;
         line-height: 18px;
         font-weight: 400;
@@ -115,6 +134,7 @@ nav.navbar {
     }
   }
 }
+
 @media (max-width: 992px) {
   nav.navbar {
     > .wrap {
@@ -141,6 +161,80 @@ nav.navbar {
   }
 }
 
+@media (min-width: 992px) and (max-width: 1920px) {
+  nav.navbar {
+    > .wrap {
+      > .navbar-brand {
+        font-size: 36px;
+      }
+
+      .navbar-nav {
+        > a {
+          font-size: 14px;
+          padding: 15px 20px;
+        }
+      }
+    }
+  }
+}
+.bsb-hero-1 {
+  direction: rtl;
+  text-align: right;
+
+  .container {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .row {
+    direction: rtl;
+    text-align: right;
+  }
+
+  .col-12 {
+    margin-top: 80px;
+    direction: rtl;
+    text-align: right;
+
+    @media (max-width: 768px) {
+      .bsb-hero-1 {
+        margin-top: 60px;
+      }
+    }
+    h2 {
+      font-size: 2.5rem;
+      @media (max-width: 768px) {
+        font-size: 2rem;
+      }
+      @media (max-width: 576px) {
+        font-size: 1.5rem;
+      }
+      @media (min-width: 1200px) {
+        font-size: 3rem;
+      }
+      @media (min-width: 1920px) {
+        font-size: 3.5rem;
+      }
+    }
+
+    p {
+      font-size: 1.25rem;
+      @media (max-width: 768px) {
+        font-size: 1rem;
+      }
+      @media (max-width: 576px) {
+        font-size: 0.875rem;
+      }
+      @media (min-width: 1200px) {
+        font-size: 1.5rem;
+      }
+      @media (min-width: 1920px) {
+        font-size: 1.75rem;
+      }
+    }
+  }
+}
+
 div.kala {
   margin-top: 100px;
   .container {
@@ -149,7 +243,6 @@ div.kala {
     align-items: center;
     height: 20vh;
 
-    // Center text styling
     .text-center {
       .subheading {
         color: $subheading-color;
@@ -177,9 +270,9 @@ div.kala {
       width: 100%;
       max-width: 550px;
       margin: 0 auto;
-      border: 1px solid #ddd; // حاشیه‌ی خاکستری کمرنگ
-      border-radius: 8px; // گوشه‌های گرد
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); // سایه برای ایجاد عمق
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 
       img {
         width: 100%;
@@ -205,14 +298,14 @@ div.kala {
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1920px) {
   .full-width-container {
     align-items: flex-start;
     justify-content: start;
   }
 
   .card {
-    max-width: 300px; // کاهش حداکثر عرض کارت در تبلت‌ها
+    max-width: 300px;
   }
 
   .card-body {
@@ -222,7 +315,7 @@ div.kala {
 
 @media (max-width: 576px) {
   .card {
-    max-width: 100%; // کارت‌ها در موبایل 100% عرض بگیرند
+    max-width: 100%;
   }
 }
 
@@ -292,7 +385,7 @@ div.kala {
           width: 100%;
         }
         &:hover {
-          background-color: darken(#000, 10%);
+          background-color: #000;
         }
       }
     }
